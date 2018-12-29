@@ -1,0 +1,36 @@
+#menu{background:#363636;color:#ffffff;height:45px;margin-top:10px;}
+#menu ul,#menu li{margin:0;padding:0;list-style:none}
+#menu ul{height:45px}
+#menu li{float:left;display:inline;position:relative;font:bold 13px Arial;}
+#menu li a{color:#ffffff}
+#menu a{display:block;line-height:45px;padding:0 14px;text-decoration:none;color:#333;}
+#menu li:hover > a,#menu li a:hover{color:black;background:white;}
+#menu input{display:none;margin:0 0;padding:0 0;width:80px;height:35px;opacity:0;cursor:pointer}
+#menu label{font:bold 30px Arial;display:none;width:35px;height:36px;line-height:36px;text-align:center}
+#menu label span{font-size:13px;position:absolute;left:35px}
+#menu ul.menus{height:auto;overflow:hidden;width:180px;background:#fff;position:absolute;z-index:99;display:none;border:1px solid #ccc;border-top:none;color:#333}
+#menu ul.menus a{color:#333}
+#menu ul.menus li{display:block;width:100%;font:12px Arial;text-transform:none;}
+#menu li:hover ul.menus{display:block}
+#menu a.prett,#menu a.trigger2{padding:0 27px 0 14px}
+#menu li:hover > a.prett,#menu a.prett:hover{background:#fff;color:#333}
+#menu a.prett::after{content:"";width:0;height:0;border-width:6px 5px;border-style:solid;border-color:#eee transparent transparent transparent;position:absolute;top:15px;right:9px}
+#menu ul.menus a:hover{background:#BABABA;}
+#menu a.trigger2::after{content:"";width:0;height:0;border-width:5px 6px;border-style:solid;border-color:transparent transparent transparent #eee ;position:absolute;top:13px;right:9px}
+
+@media screen and (max-width: 768px){
+#menu{position:relative}
+#menu ul{background:#464646;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;}
+#menu ul.menus{width:100%;position:static;border:none}
+#menu li{display:block;float:none;width:auto;text-align:left}
+#menu li a{color:#fff}
+#menu li a:hover{color:#333}
+#menu li:hover{background:#BABABA;color:#333;}
+#menu li:hover > a.prett,#menu a.prett:hover{background:#BABABA;color:#333;}
+#menu ul.menus a{background:#BABABA;}
+#menu ul.menus a:hover{background:#fff;}
+#menu input,#menu label{position:absolute;top:0;left:0;display:block}
+#menu input{z-index:4}
+#menu input:checked + label{color:white}
+#menu input:checked ~ ul{display:block}
+}
